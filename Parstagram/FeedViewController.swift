@@ -14,6 +14,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [PFObject]()
+    let numberOfPosts = 20
     
     let myRefreshControl = UIRefreshControl()
     
@@ -36,7 +37,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     @objc func loadPosts() {
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
-        query.limit = 20
+        query.limit = numberOfPosts
         query.order(byDescending: "createdAt")
         
         query.findObjectsInBackground { (posts, error) in
@@ -45,6 +46,26 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.tableView.reloadData()
                 self.myRefreshControl.endRefreshing()
             }
+        }
+    }
+    
+    func loadMorePosts() {
+        let query = PFQuery(className:"Posts")
+        query.includeKey("author")
+        query.limit = numberOfPosts + 20
+        query.order(byDescending: "createdAt")
+        
+        query.findObjectsInBackground { (posts, error) in
+            if posts != nil {
+                self.posts = posts!
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == posts.count {
+            loadMorePosts()
         }
     }
     
