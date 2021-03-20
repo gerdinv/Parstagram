@@ -32,6 +32,7 @@ class SignUpViewController: UIViewController {
         user["followers"] = 0
         user["following"] = 0
         user["numberOfPosts"] = 0
+        user["description"] = ""
         
         
         user.signUpInBackground { (success, error) in

@@ -17,6 +17,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     @IBOutlet weak var postsCountLabel: UILabel!
     @IBOutlet weak var followersCountLabel: UILabel!
     @IBOutlet weak var followingCountLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var profileDescriptionLabel: UILabel!
     
     var posts = [PFObject]()
     
@@ -24,15 +26,23 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        
-        layout.minimumLineSpacing = 40
-        
+    
         loadPosts()
         loadUserData()
+        setPostConfigurations()
         
         self.collectionView.reloadData()
+    }
+    
+    func setPostConfigurations(){
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+    
+//      Makes it so that there are 3 posts per row
+        let width = view.frame.size.width / 3
+        layout.itemSize = CGSize(width: width, height: width * 1.35 )
     }
     
     func loadUserData() {
@@ -44,6 +54,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         let imageUrl = URL(string: imageFileUrl)
         
         profileImage.af.setImage(withURL: imageUrl!)
+        usernameLabel.text = user?.username
+//        profileDescriptionLabel.text = user?.description
         
 //      Makes profile picture round
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
@@ -58,7 +70,6 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let followingCount = user!["following"] as! Int
         followingCountLabel.text = "\(followingCount)"
-
     }
     
     func loadPosts() {
