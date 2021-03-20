@@ -22,12 +22,15 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     @IBAction func onSubmit(_ sender: Any) {
         let post = PFObject(className: "Posts")
+        let user = PFUser.current()!
         let imageData = imageView.image!.pngData()
         let imageFile = PFFileObject(data: imageData!)
+        let num = user["numberOfPosts"] as! Int
         
-        post["author"] = PFUser.current()!
+        post["author"] = user
         post["caption"] = commentTextField.text
         post["image"] = imageFile
+        user["numberOfPosts"] = num + 1
         
         post.saveInBackground { (success, error) in
             if success {

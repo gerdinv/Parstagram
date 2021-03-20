@@ -29,12 +29,17 @@ class SignUpViewController: UIViewController {
         user.password = passwordTextField.text
         user["fullname"] = fullnameTextField.text
         user["profileImage"] = PFFileObject(data: imageData!)!
+        user["followers"] = 0
+        user["following"] = 0
+        user["numberOfPosts"] = 0
+        
         
         user.signUpInBackground { (success, error) in
-            if success {
-                self.performSegue(withIdentifier: "loginSegueFromSignUp", sender: nil)
+            if let error = error {
+              let errorString = error.localizedDescription
+              print("Error: \(errorString)")
             } else {
-                print("Error: \(String(describing: error?.localizedDescription))")
+                self.performSegue(withIdentifier: "loginSegueFromSignUp", sender: nil)
             }
         }
     }

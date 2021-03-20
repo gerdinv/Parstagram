@@ -22,13 +22,11 @@ class LoginViewController: UIViewController {
         let password = passwordTextField.text
         
         PFUser.logInWithUsername(inBackground: username!, password: password!) {
-          (user: PFUser?, error: Error?) -> Void in
+          (user, error) in
           if user != nil {
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
-            // Do stuff after successful login.
           } else {
-            print("Error: \(String(describing: error?.localizedDescription))")
-            // The login failed. Check error to see why.
+            print("Error: \(error?.localizedDescription)")
           }
         }
     }
