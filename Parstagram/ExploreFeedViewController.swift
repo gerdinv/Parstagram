@@ -23,7 +23,19 @@ class ExploreFeedViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.dataSource = self
         
         loadPosts()
+        setPostConfigurations()
         self.collectionView.reloadData()
+    }
+    
+    func setPostConfigurations(){
+        let layout = collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+    
+//      Makes it so that there are 3 posts per row
+        let width = view.frame.size.width / 3
+        layout.itemSize = CGSize(width: width, height: width * 1.35 )
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
