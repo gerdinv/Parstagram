@@ -22,15 +22,28 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
     
     var posts = [PFObject]()
     
+    let myRefreshControl = UIRefreshControl()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
-    
+        
         loadPosts()
         loadUserData()
         setPostConfigurations()
         
+        myRefreshControl.addTarget(self, action: #selector(loadUserData), for: .valueChanged)
+        collectionView.refreshControl = myRefreshControl
+        
+        self.collectionView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadPosts()
+        loadUserData()
         self.collectionView.reloadData()
     }
     
@@ -45,7 +58,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         layout.itemSize = CGSize(width: width, height: width * 1.35 )
     }
     
-    func loadUserData() {
+    @objc func loadUserData() {
         let user = PFUser.current()
         
 //      Getting image
@@ -55,7 +68,7 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         profileImage.af.setImage(withURL: imageUrl!)
         usernameLabel.text = user?.username
-//        profileDescriptionLabel.text = user?.description
+        profileDescriptionLabel.text = user!["description"] as! String
         
 //      Makes profile picture round
         profileImage.layer.cornerRadius = profileImage.frame.size.width / 2
@@ -70,9 +83,11 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         
         let followingCount = user!["following"] as! Int
         followingCountLabel.text = "\(followingCount)"
+        
+        self.myRefreshControl.endRefreshing()
     }
     
-    func loadPosts() {
+    @objc func loadPosts() {
         let query = PFQuery(className:"Posts")
         query.includeKey("author")
         query.whereKey("author", equalTo: PFUser.current()!)

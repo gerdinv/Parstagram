@@ -18,6 +18,7 @@ class ExploreFeedViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
         collectionView.delegate = self
         collectionView.dataSource = self

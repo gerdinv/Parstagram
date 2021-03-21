@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0B300C9326056393000EED8A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B300C9226056393000EED8A /* ProfileViewController.swift */; };
 		0B300C98260566C9000EED8A /* ProfilePostGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B300C97260566C9000EED8A /* ProfilePostGridCell.swift */; };
+		0B3631CB2607117A00948409 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3631CA2607117A00948409 /* CommentsViewController.swift */; };
 		0B3FF9DD26033BD200048060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FF9DC26033BD200048060 /* AppDelegate.swift */; };
 		0B3FF9DF26033BD200048060 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FF9DE26033BD200048060 /* SceneDelegate.swift */; };
 		0B3FF9E426033BD200048060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FF9E226033BD200048060 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		0B300C9226056393000EED8A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B300C97260566C9000EED8A /* ProfilePostGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostGridCell.swift; sourceTree = "<group>"; };
+		0B3631CA2607117A00948409 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		0B3FF9D926033BD200048060 /* Parstagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Parstagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3FF9DC26033BD200048060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B3FF9DE26033BD200048060 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				0B300C97260566C9000EED8A /* ProfilePostGridCell.swift */,
 				0BBBBB1B2605E8BD003B6BD7 /* ExploreFeedCell.swift */,
 				0BBBBB232605E8F0003B6BD7 /* ExploreFeedViewController.swift */,
+				0B3631CA2607117A00948409 /* CommentsViewController.swift */,
 			);
 			path = Parstagram;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				0B3FF9DF26033BD200048060 /* SceneDelegate.swift in Sources */,
 				0B300C98260566C9000EED8A /* ProfilePostGridCell.swift in Sources */,
 				0B3FFA26260353FE00048060 /* SignUpViewController.swift in Sources */,
+				0B3631CB2607117A00948409 /* CommentsViewController.swift in Sources */,
 				0BBBBB242605E8F0003B6BD7 /* ExploreFeedViewController.swift in Sources */,
 				0B300C9326056393000EED8A /* ProfileViewController.swift in Sources */,
 				0B3FFA2B2604077700048060 /* CameraViewController.swift in Sources */,
@@ -618,6 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RJGU8HFWK;
 				INFOPLIST_FILE = Parstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -637,6 +642,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8RJGU8HFWK;
 				INFOPLIST_FILE = Parstagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
