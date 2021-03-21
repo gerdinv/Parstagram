@@ -12,7 +12,7 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Parstagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -553,7 +553,7 @@
                         <segue destination="oi6-P8-hUv" kind="relationship" relationship="viewControllers" id="B2x-bc-fPh"/>
                         <segue destination="Hen-Wm-mfd" kind="relationship" relationship="viewControllers" id="xnn-Zo-8Mm"/>
                         <segue destination="I1E-ah-TNv" kind="relationship" relationship="viewControllers" id="Mvd-bM-aDF"/>
-                        <segue destination="pec-5z-nvM" kind="relationship" relationship="viewControllers" id="fsE-rR-IEL"/>
+                        <segue destination="0jh-ZP-Kc0" kind="relationship" relationship="viewControllers" id="fsE-rR-IEL"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Pf-QI-8Ny" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -671,7 +671,13 @@
                         <viewLayoutGuide key="safeArea" id="PHZ-Dz-Mi2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="AJI-uN-k4T"/>
+                    <navigationItem key="navigationItem" id="K3m-Rx-pgN">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Unj-ku-8Wy">
+                            <connections>
+                                <action selector="onLogout:" destination="pec-5z-nvM" id="dpx-Qw-UZb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="968-o4-aug" id="xvn-wU-ABV"/>
                         <outlet property="followersCountLabel" destination="VN7-gV-vDI" id="rRQ-Xg-lAR"/>
@@ -684,7 +690,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDA-DK-83F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2734.7826086956525" y="1662.7232142857142"/>
+            <point key="canvasLocation" x="2735" y="2440"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gR0-dF-XsK">
@@ -705,9 +711,28 @@
             </objects>
             <point key="canvasLocation" x="1284" y="76"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="D34-cg-7rj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0jh-ZP-Kc0" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="AJI-uN-k4T"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oQC-Fc-iQz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pec-5z-nvM" kind="relationship" relationship="rootViewController" id="lB8-DO-t26"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ilv-sX-lKC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2734.7826086956525" y="1662.7232142857142"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="BRY-1a-7kJ"/>
+        <segue reference="wye-hR-tBN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
