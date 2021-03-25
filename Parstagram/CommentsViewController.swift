@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AlamofireImage
+import Parse
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
@@ -19,12 +21,41 @@ extension UIViewController {
     }
 }
 
-class CommentsViewController: UIViewController {
-
+class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var comments = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
-        // Do any additional setup after loading the view.
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        print(comments)
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        comments.count
+    }
+    
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
+        
+        
+        
+        let comment = comments[indexPath.row]
+        let user = comment["author"] as! PFUser
+        cell.usernameLabel.text = user.username
+        cell.commentLabel.text = comment["text"] as! String
+        
+        return cell
     }
 
     

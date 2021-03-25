@@ -20,11 +20,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         
 //      Allows user to stay signed in
-        if PFUser.current != nil {
-            let main = UIStoryboard(name: "Main", bundle: nil)
-            let mainTabBarController = main.instantiateViewController(identifier: "mainTabBarController")
-            window?.rootViewController = mainTabBarController
-        }
+//        if PFUser.current != nil {
+//            let main = UIStoryboard(name: "Main", bundle: nil)
+//            let mainTabBarController = main.instantiateViewController(identifier: "mainTabBarController")
+//            window?.rootViewController = mainTabBarController
+//        } else {
+//            let main = UIStoryboard(name: "Main", bundle: nil)
+//            let loginViewController = main.instantiateViewController(identifier: "loginViewController")
+//            window?.rootViewController = loginViewController
+//        }
         
     }
 
