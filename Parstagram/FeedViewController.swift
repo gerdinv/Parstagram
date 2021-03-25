@@ -9,7 +9,9 @@ import UIKit
 import Parse
 import AlamofireImage
 
-class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, myBtnDelegate {
+   
+    
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -96,6 +98,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.photoView.af.setImage(withURL: imageUrl!)
         cell.profilePhotoView.af.setImage(withURL: profileImageUrl!)
         
+        cell.comments = post["comments"] as? [PFObject]
+        cell.delegateBtn = self
+        
 //      Makes profile picture round
         cell.profilePhotoView.layer.cornerRadius = cell.profilePhotoView.frame.size.width / 2
         cell.profilePhotoView.clipsToBounds = true
@@ -123,6 +128,11 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
  
     }
     
+    func commentBtnTapped(cell: PostCell, objects: [PFObject]) {
+        self.performSegue(withIdentifier: "commentsViewSegue", sender: objects)
+        print(objects)
+    }
+    
     @IBAction func onComments(_ sender: Any) {
 //        let vc = CommentsViewController(nibName: "CommentsViewController", bundle: nil)
 //        vc.posts = posts
@@ -138,11 +148,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "commentsViewSegue" {
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                let controller = segue.destination as! CommentsViewController
-                controller.comments = (posts[indexPath.row]["comments"] as? [PFObject]) ?? []
-            }
+            let controller = segue.destination as! CommentsViewController
+            controller.comments = sender as? [PFObject] ?? []
         }
     }
     
 }
+

@@ -42,17 +42,13 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         comments.count
     }
-    
-    
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-        
-        
-        
+
         let comment = comments[indexPath.row]
         let user = comment["author"] as! PFUser
-        cell.usernameLabel.text = user.username
+        cell.usernameLabel.text =  "TE" //user.username
         cell.commentLabel.text = comment["text"] as! String
         
         return cell
@@ -71,3 +67,4 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     */
 
 }
+
