@@ -8,6 +8,7 @@
 import UIKit
 import AlamofireImage
 import Parse
+import MessageInputBar
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
@@ -21,22 +22,37 @@ extension UIViewController {
     }
 }
 
-class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-    
+
     var comments = [PFObject]()
+    var selectedPost: PFObject!
+    
+    let commentBar = MessageInputBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         
+        commentBar.inputTextView.placeholder = "Add a comment..."
+        commentBar.sendButton.title = "Post"
+        commentBar.delegate = self
+        
         tableView.delegate = self
         tableView.dataSource = self
     }
     
+    override var inputAccessoryView: UIView? {
+        return commentBar
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        print(comments)
+//        print(comments)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,6 +68,41 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.commentLabel.text = comment["text"] as! String
         
         return cell
+    }
+    
+    func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        //Create the comment
+//        let comment = PFObject(className: "comments")
+//        comment["text"] = text
+//        comment["post"] = selectedPost
+//
+////        comment["author"] = PFUser.current()!
+//
+//        selectedPost.add(comment, forKey: "comments")
+//
+//        selectedPost.saveInBackground(){(success, error) in
+//            if success {
+//                print("Comment Saved!")
+//            } else {
+//                print("Error saving comment!")
+//            }
+//        }
+        
+        print(comments)
+        tableView.reloadData()
+        //        post.add(comment, forKey: "comments")
+        //
+        //        post.saveInBackground { (success, error) in
+        //            if success {
+        //                print("comment saved")
+        //            } else {
+        //                print("error saving comment")
+        //            }
+        //        }
+        
+        //Clear and dismiss input bar
+        commentBar.inputTextView.text = nil
+        becomeFirstResponder()
     }
 
     

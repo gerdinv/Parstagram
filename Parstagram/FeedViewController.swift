@@ -101,6 +101,8 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.comments = post["comments"] as? [PFObject]
         cell.delegateBtn = self
         
+        
+        
 //      Makes profile picture round
         cell.profilePhotoView.layer.cornerRadius = cell.profilePhotoView.frame.size.width / 2
         cell.profilePhotoView.clipsToBounds = true
@@ -110,38 +112,15 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let post = posts[indexPath.row]
-        
-        let comment = PFObject(className: "comments")
-        comment["text"] = "This is a random comment"
-        comment["post"] = post
-        comment["author"] = PFUser.current()!
-        
-        post.add(comment, forKey: "comments")
-        
-        post.saveInBackground { (success, error) in
-            if success {
-                print("comment saved")
-            } else {
-                print("error saving comment")
-            }
-        }
- 
+        let comment = post 
+//        let comment = (post["comments"] as? [PFObject]) ?? []
+//        let selectedPost = post
     }
     
     func commentBtnTapped(cell: PostCell, objects: [PFObject]) {
         self.performSegue(withIdentifier: "commentsViewSegue", sender: objects)
-        print(objects)
+//        print(objects)
     }
-    
-    @IBAction func onComments(_ sender: Any) {
-//        let vc = CommentsViewController(nibName: "CommentsViewController", bundle: nil)
-//        vc.posts = posts
-//        navigationController?.pushViewController(vc, animated: true)
-        
-//        performSegue(withIdentifier: "commentsViewSegue", sender: sender)
-    }
-    
-
     
     // MARK: - Navigation
 
