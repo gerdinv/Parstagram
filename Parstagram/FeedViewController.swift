@@ -106,22 +106,13 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let post = posts[indexPath.row]
-//        let comment = post
-//        let comment = (post["comments"] as? [PFObject]) ?? []
-//        let selectedPost = post
-    }
-    
     func commentBtnTapped(cell: PostCell, objects: PFObject) {
         self.performSegue(withIdentifier: "commentsViewSegue", sender: objects)
-//        print(objects)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "commentsViewSegue" {
             let controller = segue.destination as! CommentsViewController
-//            controller.comments = sender as? [PFObject] ?? []
             controller.selectedPost = sender as! PFObject
         }
     }

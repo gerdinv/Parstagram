@@ -25,13 +25,9 @@ extension UIViewController {
 class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
-
-
+    
     var selectedPost: PFObject!
-    
     let commentBar = MessageInputBar()
-    
-    let myRefreshControl = UIRefreshControl() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,18 +49,12 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         return true
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-//        print(comments)
-//        print(selectedPost)
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if selectedPost["comments"] != nil{
             return (selectedPost["comments"] as AnyObject).count
         } else{
             return 0
         }
-        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -73,22 +63,29 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         
 //        print(comments)
         let comment = comments[indexPath.row]
-//        let user = comment["author"] as! PFUser
-//        cell.usernameLabel.text =  "TE" //user.username
+        let user = comment["author"] as! PFUser
+        
+//      Get user's profile image
+        let profileImageFile = user["profileImage"] as! PFFileObject
+        let profileFileUrl = profileImageFile.url!
+        let profileImageUrl = URL(string: profileFileUrl)
+        
+        cell.usernameLabel.text =  user.username
         cell.commentLabel.text = comment["text"] as! String
+        cell.profileImage.af.setImage(withURL: profileImageUrl!)
         
         return cell
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-//        Create the comment
+//      Create the comment
         let comment = PFObject(className: "Comments")
         comment["text"] = text
         comment["post"] = selectedPost
         comment["author"] = PFUser.current()!
 
         selectedPost.add(comment, forKey: "comments")
-//
+        
         selectedPost.saveInBackground(){(success, error) in
             if success {
                 print("Comment Saved!")
@@ -96,35 +93,11 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
                 print("Error saving comment!")
             }
         }
-        
-//        print(comments)
+
         tableView.reloadData()
-        //        post.add(comment, forKey: "comments")
-        //
-        //        post.saveInBackground { (success, error) in
-        //            if success {
-        //                print("comment saved")
-        //            } else {
-        //                print("error saving comment")
-        //            }
-        //        }
-        
         //Clear and dismiss input bar
         commentBar.inputTextView.text = nil
         becomeFirstResponder()
     }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 

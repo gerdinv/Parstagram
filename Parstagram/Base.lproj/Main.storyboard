@@ -284,20 +284,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CKa-Lo-CIj">
-                                                    <rect key="frame" x="20" y="96" width="60" height="60"/>
+                                                    <rect key="frame" x="20" y="50" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="ayC-8o-y5D"/>
                                                         <constraint firstAttribute="width" constant="60" id="guJ-31-BEL"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAX-ft-eYc">
-                                                    <rect key="frame" x="88" y="116" width="82" height="21"/>
+                                                    <rect key="frame" x="88" y="70" width="82" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acc-ZB-UV3">
-                                                    <rect key="frame" x="178" y="116" width="72" height="20.5"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comment" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acc-ZB-UV3">
+                                                    <rect key="frame" x="180" y="70" width="72" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -305,15 +305,15 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="cAX-ft-eYc" secondAttribute="bottom" constant="25" id="3Aw-RW-nU6"/>
+                                                <constraint firstItem="acc-ZB-UV3" firstAttribute="top" secondItem="OA6-iX-8Ww" secondAttribute="top" constant="70" id="5UR-cf-Qn0"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="CKa-Lo-CIj" secondAttribute="bottom" constant="6" id="UgU-kK-ZT4"/>
                                                 <constraint firstItem="cAX-ft-eYc" firstAttribute="leading" secondItem="CKa-Lo-CIj" secondAttribute="trailing" constant="8" id="eOd-yA-UJl"/>
-                                                <constraint firstItem="acc-ZB-UV3" firstAttribute="top" secondItem="OA6-iX-8Ww" secondAttribute="top" constant="116" id="hYT-NE-blD"/>
+                                                <constraint firstItem="CKa-Lo-CIj" firstAttribute="top" secondItem="OA6-iX-8Ww" secondAttribute="top" constant="50" id="jIG-Gp-VcW"/>
                                                 <constraint firstItem="acc-ZB-UV3" firstAttribute="leading" secondItem="cAX-ft-eYc" secondAttribute="trailing" constant="10" id="ktW-Ub-krm"/>
                                                 <constraint firstItem="CKa-Lo-CIj" firstAttribute="leading" secondItem="OA6-iX-8Ww" secondAttribute="leading" constant="20" symbolic="YES" id="kxn-6T-ia5"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="acc-ZB-UV3" secondAttribute="trailing" constant="10" id="pjl-j0-5KK"/>
-                                                <constraint firstItem="cAX-ft-eYc" firstAttribute="top" secondItem="OA6-iX-8Ww" secondAttribute="top" constant="116" id="ukn-di-MtL"/>
+                                                <constraint firstItem="cAX-ft-eYc" firstAttribute="top" secondItem="OA6-iX-8Ww" secondAttribute="top" constant="70" id="ukn-di-MtL"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="acc-ZB-UV3" secondAttribute="bottom" constant="25" id="vIH-51-IuD"/>
-                                                <constraint firstItem="CKa-Lo-CIj" firstAttribute="top" secondItem="OA6-iX-8Ww" secondAttribute="top" constant="96" id="zDu-C6-cAM"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
