@@ -26,10 +26,12 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
 
-    var comments = [PFObject]()
+
     var selectedPost: PFObject!
     
     let commentBar = MessageInputBar()
+    
+    let myRefreshControl = UIRefreshControl() 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,42 +55,49 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidAppear(_ animated: Bool) {
 //        print(comments)
+//        print(selectedPost)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        comments.count
+        if selectedPost["comments"] != nil{
+            return (selectedPost["comments"] as AnyObject).count
+        } else{
+            return 0
+        }
+        
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-
+        let comments = selectedPost["comments"] as! [PFObject]
+        
+//        print(comments)
         let comment = comments[indexPath.row]
-        let user = comment["author"] as! PFUser
-        cell.usernameLabel.text =  "TE" //user.username
+//        let user = comment["author"] as! PFUser
+//        cell.usernameLabel.text =  "TE" //user.username
         cell.commentLabel.text = comment["text"] as! String
         
         return cell
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        //Create the comment
-//        let comment = PFObject(className: "comments")
-//        comment["text"] = text
-//        comment["post"] = selectedPost
+//        Create the comment
+        let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
+
+        selectedPost.add(comment, forKey: "comments")
 //
-////        comment["author"] = PFUser.current()!
-//
-//        selectedPost.add(comment, forKey: "comments")
-//
-//        selectedPost.saveInBackground(){(success, error) in
-//            if success {
-//                print("Comment Saved!")
-//            } else {
-//                print("Error saving comment!")
-//            }
-//        }
+        selectedPost.saveInBackground(){(success, error) in
+            if success {
+                print("Comment Saved!")
+            } else {
+                print("Error saving comment!")
+            }
+        }
         
-        print(comments)
+//        print(comments)
         tableView.reloadData()
         //        post.add(comment, forKey: "comments")
         //

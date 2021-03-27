@@ -10,9 +10,6 @@ import Parse
 import AlamofireImage
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, myBtnDelegate {
-   
-    
-
     @IBOutlet weak var tableView: UITableView!
     
     var posts = [PFObject]()
@@ -98,10 +95,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         cell.photoView.af.setImage(withURL: imageUrl!)
         cell.profilePhotoView.af.setImage(withURL: profileImageUrl!)
         
-        cell.comments = post["comments"] as? [PFObject]
+//      Set my delegate
+        cell.selectedPost = post
         cell.delegateBtn = self
-        
-        
         
 //      Makes profile picture round
         cell.profilePhotoView.layer.cornerRadius = cell.profilePhotoView.frame.size.width / 2
@@ -111,26 +107,23 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.row]
-        let comment = post 
+//        let post = posts[indexPath.row]
+//        let comment = post
 //        let comment = (post["comments"] as? [PFObject]) ?? []
 //        let selectedPost = post
     }
     
-    func commentBtnTapped(cell: PostCell, objects: [PFObject]) {
+    func commentBtnTapped(cell: PostCell, objects: PFObject) {
         self.performSegue(withIdentifier: "commentsViewSegue", sender: objects)
 //        print(objects)
     }
-    
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "commentsViewSegue" {
             let controller = segue.destination as! CommentsViewController
-            controller.comments = sender as? [PFObject] ?? []
+//            controller.comments = sender as? [PFObject] ?? []
+            controller.selectedPost = sender as! PFObject
         }
     }
-    
 }
 
