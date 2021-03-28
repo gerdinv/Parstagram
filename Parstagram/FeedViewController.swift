@@ -110,25 +110,6 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.performSegue(withIdentifier: "commentsViewSegue", sender: objects)
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let post = posts[indexPath.row]
-
-                let comment = PFObject(className: "comments")
-                comment["text"] = "This is a random comment"
-                comment["post"] = post
-                comment["author"] = PFUser.current()!
-
-                post.add(comment, forKey: "comments")
-
-                post.saveInBackground { (success, error) in
-                    if success {
-                        print("comment saved")
-                    } else {
-                        print("error saving comment")
-                    }
-                }
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "commentsViewSegue" {
             let controller = segue.destination as! CommentsViewController

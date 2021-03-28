@@ -38,6 +38,8 @@ class ProfileViewController: UIViewController, UICollectionViewDelegate, UIColle
         collectionView.refreshControl = myRefreshControl
         
         self.collectionView.reloadData()
+        self.hideKeyboardWhenTappedAround()
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
