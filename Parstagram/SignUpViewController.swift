@@ -20,7 +20,6 @@ class SignUpViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
     }
     
-    
     @IBAction func onSignUp(_ sender: Any) {
         let user = PFUser()
         let imageData = UIImage(named: "profile_tab")!.pngData() //Default profile picture 
@@ -34,7 +33,6 @@ class SignUpViewController: UIViewController {
         user["following"] = 0
         user["numberOfPosts"] = 0
         user["description"] = ""
-        
         
         user.signUpInBackground { (success, error) in
             if let error = error {

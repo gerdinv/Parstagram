@@ -49,6 +49,10 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         return true
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if selectedPost["comments"] != nil{
             return (selectedPost["comments"] as AnyObject).count
@@ -57,11 +61,12 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
 
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CommentCell") as! CommentCell
-        let comments = selectedPost["comments"] as! [PFObject]
         
-//        print(comments)
+//      Get comment and user
+        let comments = selectedPost["comments"] as! [PFObject]
         let comment = comments[indexPath.row]
         let user = comment["author"] as! PFUser
         
@@ -70,8 +75,9 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         let profileFileUrl = profileImageFile.url!
         let profileImageUrl = URL(string: profileFileUrl)
         
+//      Update elements
         cell.usernameLabel.text =  user.username
-        cell.commentLabel.text = comment["text"] as! String
+        cell.commentLabel.text = comment["text"] as? String
         cell.profileImage.af.setImage(withURL: profileImageUrl!)
         
         return cell

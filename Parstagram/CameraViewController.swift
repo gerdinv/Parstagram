@@ -30,7 +30,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         post["author"] = user
         post["caption"] = commentTextField.text
-        post["comments"] = 
         post["image"] = imageFile
         user["numberOfPosts"] = num + 1
         

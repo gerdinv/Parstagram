@@ -35,7 +35,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @objc func loadPosts() {
         let query = PFQuery(className:"Posts")
-        query.includeKeys(["author", "comments"])
+        query.includeKeys(["author", "comments","comments.author"])
         query.limit = numberOfPosts
         query.order(byDescending: "createdAt")
         
@@ -50,7 +50,7 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func loadMorePosts() {
         let query = PFQuery(className:"Posts")
-        query.includeKeys(["author", "comments"])
+        query.includeKeys(["author", "comments","comments.author"])
         query.limit = numberOfPosts + 20
         query.order(byDescending: "createdAt")
         
@@ -63,9 +63,9 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row + 1 == posts.count {
-            loadMorePosts()
-        }
+//        if indexPath.row + 1 == posts.count {
+//            loadMorePosts()
+//        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -108,6 +108,25 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func commentBtnTapped(cell: PostCell, objects: PFObject) {
         self.performSegue(withIdentifier: "commentsViewSegue", sender: objects)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let post = posts[indexPath.row]
+
+                let comment = PFObject(className: "comments")
+                comment["text"] = "This is a random comment"
+                comment["post"] = post
+                comment["author"] = PFUser.current()!
+
+                post.add(comment, forKey: "comments")
+
+                post.saveInBackground { (success, error) in
+                    if success {
+                        print("comment saved")
+                    } else {
+                        print("error saving comment")
+                    }
+                }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
