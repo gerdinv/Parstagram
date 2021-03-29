@@ -9,6 +9,9 @@ target 'Parstagram' do
     pod 'Parse'
     pod 'AlamofireImage'
     pod 'MessageInputBar'
+    pod 'YPImagePicker'
+    pod 'PryntTrimmerView', '4.0.0'
+    pod 'SteviaLayout'
 
   target 'ParstagramTests' do
     inherit! :search_paths

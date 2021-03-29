@@ -7,6 +7,95 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B22D33B261196200049FF36 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 0B22D2BF261196200049FF36 /* LICENSE */; };
+		0B22D33C261196200049FF36 /* YPImagePickerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B22D2C1261196200049FF36 /* YPImagePickerLocalizable.strings */; };
+		0B22D33D261196200049FF36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B22D2CA261196200049FF36 /* Assets.xcassets */; };
+		0B22D33E261196200049FF36 /* YPVideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2DA261196200049FF36 /* YPVideoView.swift */; };
+		0B22D33F261196200049FF36 /* YPVideoFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2DB261196200049FF36 /* YPVideoFiltersVC.swift */; };
+		0B22D340261196200049FF36 /* YPVideoFiltersVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B22D2DC261196200049FF36 /* YPVideoFiltersVC.xib */; };
+		0B22D341261196200049FF36 /* YPCropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2DE261196200049FF36 /* YPCropView.swift */; };
+		0B22D342261196200049FF36 /* YPCropVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2DF261196200049FF36 /* YPCropVC.swift */; };
+		0B22D343261196200049FF36 /* YPPhotoFiltersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E0261196200049FF36 /* YPPhotoFiltersVC.swift */; };
+		0B22D344261196200049FF36 /* YPFiltersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E1261196200049FF36 /* YPFiltersView.swift */; };
+		0B22D345261196200049FF36 /* YPFilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E2261196200049FF36 /* YPFilterCollectionViewCell.swift */; };
+		0B22D346261196200049FF36 /* YPFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E3261196200049FF36 /* YPFilter.swift */; };
+		0B22D347261196200049FF36 /* YPPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E4261196200049FF36 /* YPPickerVC.swift */; };
+		0B22D348261196200049FF36 /* YPFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E6261196200049FF36 /* YPFonts.swift */; };
+		0B22D349261196200049FF36 /* YPImageSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E7261196200049FF36 /* YPImageSize.swift */; };
+		0B22D34A261196200049FF36 /* YPImagePickerConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E8261196200049FF36 /* YPImagePickerConfiguration.swift */; };
+		0B22D34B261196200049FF36 /* YPWordings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2E9261196200049FF36 /* YPWordings.swift */; };
+		0B22D34C261196200049FF36 /* YPColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2EA261196200049FF36 /* YPColors.swift */; };
+		0B22D34D261196200049FF36 /* YPPickerScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2EB261196200049FF36 /* YPPickerScreen.swift */; };
+		0B22D34E261196200049FF36 /* YPIcons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2EC261196200049FF36 /* YPIcons.swift */; };
+		0B22D34F261196200049FF36 /* YPImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2ED261196200049FF36 /* YPImagePicker.swift */; };
+		0B22D350261196200049FF36 /* YPLibrarySelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2EF261196200049FF36 /* YPLibrarySelection.swift */; };
+		0B22D351261196200049FF36 /* YPMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F0261196200049FF36 /* YPMediaItem.swift */; };
+		0B22D352261196200049FF36 /* YPDragDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F1261196200049FF36 /* YPDragDirection.swift */; };
+		0B22D353261196200049FF36 /* YPPermissionDeniedPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F2261196200049FF36 /* YPPermissionDeniedPopup.swift */; };
+		0B22D354261196200049FF36 /* YPTrimError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F3261196200049FF36 /* YPTrimError.swift */; };
+		0B22D355261196200049FF36 /* YPSelectionsGalleryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F5261196200049FF36 /* YPSelectionsGalleryVC.swift */; };
+		0B22D356261196200049FF36 /* YPSelectionsGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F6261196200049FF36 /* YPSelectionsGalleryView.swift */; };
+		0B22D357261196200049FF36 /* YPSelectionsGalleryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2F7261196200049FF36 /* YPSelectionsGalleryCell.swift */; };
+		0B22D358261196200049FF36 /* YPVideoCaptureHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2FA261196200049FF36 /* YPVideoCaptureHelper.swift */; };
+		0B22D359261196200049FF36 /* YPVideoCaptureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2FB261196200049FF36 /* YPVideoCaptureVC.swift */; };
+		0B22D35A261196200049FF36 /* YPLibraryVC+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2FD261196200049FF36 /* YPLibraryVC+CollectionView.swift */; };
+		0B22D35B261196200049FF36 /* YPAlbumsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2FE261196200049FF36 /* YPAlbumsManager.swift */; };
+		0B22D35C261196200049FF36 /* YPLibraryVC+PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D2FF261196200049FF36 /* YPLibraryVC+PanGesture.swift */; };
+		0B22D35D261196200049FF36 /* YPLibraryViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D300261196200049FF36 /* YPLibraryViewDelegate.swift */; };
+		0B22D35E261196200049FF36 /* YPGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D301261196200049FF36 /* YPGridView.swift */; };
+		0B22D35F261196200049FF36 /* YPAssetZoomableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D302261196200049FF36 /* YPAssetZoomableView.swift */; };
+		0B22D360261196200049FF36 /* YPAlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D303261196200049FF36 /* YPAlbumView.swift */; };
+		0B22D361261196200049FF36 /* YPAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D304261196200049FF36 /* YPAlbumVC.swift */; };
+		0B22D362261196200049FF36 /* YPAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D305261196200049FF36 /* YPAlbumCell.swift */; };
+		0B22D363261196200049FF36 /* YPLibrary+LibraryChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D306261196200049FF36 /* YPLibrary+LibraryChange.swift */; };
+		0B22D364261196200049FF36 /* YPMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D308261196200049FF36 /* YPMenuItem.swift */; };
+		0B22D365261196200049FF36 /* YPBottomPager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D309261196200049FF36 /* YPBottomPager.swift */; };
+		0B22D366261196200049FF36 /* YPPagerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D30A261196200049FF36 /* YPPagerMenu.swift */; };
+		0B22D367261196200049FF36 /* YPBottomPagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D30B261196200049FF36 /* YPBottomPagerView.swift */; };
+		0B22D368261196200049FF36 /* YPLibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D30C261196200049FF36 /* YPLibraryVC.swift */; };
+		0B22D369261196200049FF36 /* LibraryMediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D30D261196200049FF36 /* LibraryMediaManager.swift */; };
+		0B22D36A261196200049FF36 /* YPAssetViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D30E261196200049FF36 /* YPAssetViewContainer.swift */; };
+		0B22D36B261196200049FF36 /* YPLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D30F261196200049FF36 /* YPLibraryView.swift */; };
+		0B22D36C261196200049FF36 /* YPAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D310261196200049FF36 /* YPAlbum.swift */; };
+		0B22D36D261196200049FF36 /* YPLibraryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D311261196200049FF36 /* YPLibraryViewCell.swift */; };
+		0B22D36E261196200049FF36 /* YPLibraryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B22D312261196200049FF36 /* YPLibraryView.xib */; };
+		0B22D36F261196200049FF36 /* YPPhotoCaptureDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D314261196200049FF36 /* YPPhotoCaptureDefaults.swift */; };
+		0B22D370261196200049FF36 /* YPPhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D315261196200049FF36 /* YPPhotoCapture.swift */; };
+		0B22D371261196200049FF36 /* YPCameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D316261196200049FF36 /* YPCameraView.swift */; };
+		0B22D372261196200049FF36 /* PostiOS10PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D317261196200049FF36 /* PostiOS10PhotoCapture.swift */; };
+		0B22D373261196200049FF36 /* PreiOS10PhotoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D318261196200049FF36 /* PreiOS10PhotoCapture.swift */; };
+		0B22D374261196200049FF36 /* YPCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D319261196200049FF36 /* YPCameraVC.swift */; };
+		0B22D375261196200049FF36 /* YPVideoProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D31B261196200049FF36 /* YPVideoProcessor.swift */; };
+		0B22D376261196200049FF36 /* YPPermissionCheckable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D31C261196200049FF36 /* YPPermissionCheckable.swift */; };
+		0B22D377261196200049FF36 /* YPDeviceOrientationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D31D261196200049FF36 /* YPDeviceOrientationHelper.swift */; };
+		0B22D378261196200049FF36 /* AVCaptureDevice+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D31F261196200049FF36 /* AVCaptureDevice+Extensions.swift */; };
+		0B22D379261196200049FF36 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D320261196200049FF36 /* UIButton+Extensions.swift */; };
+		0B22D37A261196200049FF36 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D321261196200049FF36 /* String+Extensions.swift */; };
+		0B22D37B261196200049FF36 /* AVMutableComposition+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D322261196200049FF36 /* AVMutableComposition+Extensions.swift */; };
+		0B22D37C261196200049FF36 /* AVAsset+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D323261196200049FF36 /* AVAsset+Extensions.swift */; };
+		0B22D37D261196200049FF36 /* AVPlayer+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D324261196200049FF36 /* AVPlayer+Extensions.swift */; };
+		0B22D37E261196200049FF36 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D325261196200049FF36 /* UIColor+Extensions.swift */; };
+		0B22D37F261196200049FF36 /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D326261196200049FF36 /* UIImage+Extensions.swift */; };
+		0B22D380261196200049FF36 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D327261196200049FF36 /* UINavigationBar+Extensions.swift */; };
+		0B22D381261196200049FF36 /* PHCachingImageManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D328261196200049FF36 /* PHCachingImageManager+Extensions.swift */; };
+		0B22D382261196200049FF36 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D329261196200049FF36 /* UIBarButtonItem+Extensions.swift */; };
+		0B22D383261196200049FF36 /* CIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D32A261196200049FF36 /* CIImage+Extensions.swift */; };
+		0B22D384261196200049FF36 /* NSFileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D32B261196200049FF36 /* NSFileManager+Extensions.swift */; };
+		0B22D385261196200049FF36 /* URL+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D32C261196200049FF36 /* URL+Extensions.swift */; };
+		0B22D386261196200049FF36 /* AVFoundation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D32D261196200049FF36 /* AVFoundation+Extensions.swift */; };
+		0B22D387261196200049FF36 /* PHFetchResult+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D32E261196200049FF36 /* PHFetchResult+Extensions.swift */; };
+		0B22D388261196200049FF36 /* CGRect+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D32F261196200049FF36 /* CGRect+Extensions.swift */; };
+		0B22D389261196200049FF36 /* AVFileType+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D330261196200049FF36 /* AVFileType+Extensions.swift */; };
+		0B22D38A261196200049FF36 /* AVCaptureSession+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D331261196200049FF36 /* AVCaptureSession+Extensions.swift */; };
+		0B22D38B261196200049FF36 /* CGFloat+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D332261196200049FF36 /* CGFloat+Extensions.swift */; };
+		0B22D38C261196200049FF36 /* UICollectionView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D333261196200049FF36 /* UICollectionView+Extensions.swift */; };
+		0B22D38D261196200049FF36 /* IndexSet+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D334261196200049FF36 /* IndexSet+Extensions.swift */; };
+		0B22D38E261196200049FF36 /* YPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D335261196200049FF36 /* YPHelper.swift */; };
+		0B22D38F261196200049FF36 /* YPLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D336261196200049FF36 /* YPLoadingView.swift */; };
+		0B22D390261196200049FF36 /* YPPhotoSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D337261196200049FF36 /* YPPhotoSaver.swift */; };
+		0B22D391261196200049FF36 /* YPAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D338261196200049FF36 /* YPAlerts.swift */; };
+		0B22D392261196200049FF36 /* YPLoaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B22D339261196200049FF36 /* YPLoaders.swift */; };
+		0B22D393261196200049FF36 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0B22D33A261196200049FF36 /* README.md */; };
 		0B300C9326056393000EED8A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B300C9226056393000EED8A /* ProfileViewController.swift */; };
 		0B300C98260566C9000EED8A /* ProfilePostGridCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B300C97260566C9000EED8A /* ProfilePostGridCell.swift */; };
 		0B3631CB2607117A00948409 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3631CA2607117A00948409 /* CommentsViewController.swift */; };
@@ -49,6 +138,114 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B22D2BF261196200049FF36 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		0B22D2C2261196200049FF36 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2C3261196200049FF36 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2C4261196200049FF36 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		0B22D2C5261196200049FF36 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2C6261196200049FF36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2C7261196200049FF36 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2C8261196200049FF36 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2C9261196200049FF36 /* bg */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = bg; path = bg.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2CA261196200049FF36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B22D2CB261196200049FF36 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2CC261196200049FF36 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		0B22D2CD261196200049FF36 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2CE261196200049FF36 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2CF261196200049FF36 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		0B22D2D0261196200049FF36 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2D1261196200049FF36 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2D2261196200049FF36 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2D3261196200049FF36 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2D4261196200049FF36 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2D5261196200049FF36 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/YPImagePickerLocalizable.strings; sourceTree = "<group>"; };
+		0B22D2D6261196200049FF36 /* pt-PT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-PT"; path = "pt-PT.lproj/YPImagePickerLocalizable.strings"; sourceTree = "<group>"; };
+		0B22D2DA261196200049FF36 /* YPVideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoView.swift; sourceTree = "<group>"; };
+		0B22D2DB261196200049FF36 /* YPVideoFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoFiltersVC.swift; sourceTree = "<group>"; };
+		0B22D2DC261196200049FF36 /* YPVideoFiltersVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPVideoFiltersVC.xib; sourceTree = "<group>"; };
+		0B22D2DE261196200049FF36 /* YPCropView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropView.swift; sourceTree = "<group>"; };
+		0B22D2DF261196200049FF36 /* YPCropVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCropVC.swift; sourceTree = "<group>"; };
+		0B22D2E0261196200049FF36 /* YPPhotoFiltersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoFiltersVC.swift; sourceTree = "<group>"; };
+		0B22D2E1261196200049FF36 /* YPFiltersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFiltersView.swift; sourceTree = "<group>"; };
+		0B22D2E2261196200049FF36 /* YPFilterCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		0B22D2E3261196200049FF36 /* YPFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFilter.swift; sourceTree = "<group>"; };
+		0B22D2E4261196200049FF36 /* YPPickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerVC.swift; sourceTree = "<group>"; };
+		0B22D2E6261196200049FF36 /* YPFonts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPFonts.swift; sourceTree = "<group>"; };
+		0B22D2E7261196200049FF36 /* YPImageSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImageSize.swift; sourceTree = "<group>"; };
+		0B22D2E8261196200049FF36 /* YPImagePickerConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePickerConfiguration.swift; sourceTree = "<group>"; };
+		0B22D2E9261196200049FF36 /* YPWordings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPWordings.swift; sourceTree = "<group>"; };
+		0B22D2EA261196200049FF36 /* YPColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPColors.swift; sourceTree = "<group>"; };
+		0B22D2EB261196200049FF36 /* YPPickerScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPickerScreen.swift; sourceTree = "<group>"; };
+		0B22D2EC261196200049FF36 /* YPIcons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPIcons.swift; sourceTree = "<group>"; };
+		0B22D2ED261196200049FF36 /* YPImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPImagePicker.swift; sourceTree = "<group>"; };
+		0B22D2EF261196200049FF36 /* YPLibrarySelection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibrarySelection.swift; sourceTree = "<group>"; };
+		0B22D2F0261196200049FF36 /* YPMediaItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMediaItem.swift; sourceTree = "<group>"; };
+		0B22D2F1261196200049FF36 /* YPDragDirection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDragDirection.swift; sourceTree = "<group>"; };
+		0B22D2F2261196200049FF36 /* YPPermissionDeniedPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionDeniedPopup.swift; sourceTree = "<group>"; };
+		0B22D2F3261196200049FF36 /* YPTrimError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPTrimError.swift; sourceTree = "<group>"; };
+		0B22D2F5261196200049FF36 /* YPSelectionsGalleryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryVC.swift; sourceTree = "<group>"; };
+		0B22D2F6261196200049FF36 /* YPSelectionsGalleryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryView.swift; sourceTree = "<group>"; };
+		0B22D2F7261196200049FF36 /* YPSelectionsGalleryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPSelectionsGalleryCell.swift; sourceTree = "<group>"; };
+		0B22D2FA261196200049FF36 /* YPVideoCaptureHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoCaptureHelper.swift; sourceTree = "<group>"; };
+		0B22D2FB261196200049FF36 /* YPVideoCaptureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoCaptureVC.swift; sourceTree = "<group>"; };
+		0B22D2FD261196200049FF36 /* YPLibraryVC+CollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+CollectionView.swift"; sourceTree = "<group>"; };
+		0B22D2FE261196200049FF36 /* YPAlbumsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumsManager.swift; sourceTree = "<group>"; };
+		0B22D2FF261196200049FF36 /* YPLibraryVC+PanGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibraryVC+PanGesture.swift"; sourceTree = "<group>"; };
+		0B22D300261196200049FF36 /* YPLibraryViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewDelegate.swift; sourceTree = "<group>"; };
+		0B22D301261196200049FF36 /* YPGridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPGridView.swift; sourceTree = "<group>"; };
+		0B22D302261196200049FF36 /* YPAssetZoomableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAssetZoomableView.swift; sourceTree = "<group>"; };
+		0B22D303261196200049FF36 /* YPAlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumView.swift; sourceTree = "<group>"; };
+		0B22D304261196200049FF36 /* YPAlbumVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumVC.swift; sourceTree = "<group>"; };
+		0B22D305261196200049FF36 /* YPAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbumCell.swift; sourceTree = "<group>"; };
+		0B22D306261196200049FF36 /* YPLibrary+LibraryChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YPLibrary+LibraryChange.swift"; sourceTree = "<group>"; };
+		0B22D308261196200049FF36 /* YPMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPMenuItem.swift; sourceTree = "<group>"; };
+		0B22D309261196200049FF36 /* YPBottomPager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPager.swift; sourceTree = "<group>"; };
+		0B22D30A261196200049FF36 /* YPPagerMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPagerMenu.swift; sourceTree = "<group>"; };
+		0B22D30B261196200049FF36 /* YPBottomPagerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPBottomPagerView.swift; sourceTree = "<group>"; };
+		0B22D30C261196200049FF36 /* YPLibraryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryVC.swift; sourceTree = "<group>"; };
+		0B22D30D261196200049FF36 /* LibraryMediaManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryMediaManager.swift; sourceTree = "<group>"; };
+		0B22D30E261196200049FF36 /* YPAssetViewContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAssetViewContainer.swift; sourceTree = "<group>"; };
+		0B22D30F261196200049FF36 /* YPLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryView.swift; sourceTree = "<group>"; };
+		0B22D310261196200049FF36 /* YPAlbum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlbum.swift; sourceTree = "<group>"; };
+		0B22D311261196200049FF36 /* YPLibraryViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLibraryViewCell.swift; sourceTree = "<group>"; };
+		0B22D312261196200049FF36 /* YPLibraryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YPLibraryView.xib; sourceTree = "<group>"; };
+		0B22D314261196200049FF36 /* YPPhotoCaptureDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCaptureDefaults.swift; sourceTree = "<group>"; };
+		0B22D315261196200049FF36 /* YPPhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoCapture.swift; sourceTree = "<group>"; };
+		0B22D316261196200049FF36 /* YPCameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraView.swift; sourceTree = "<group>"; };
+		0B22D317261196200049FF36 /* PostiOS10PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostiOS10PhotoCapture.swift; sourceTree = "<group>"; };
+		0B22D318261196200049FF36 /* PreiOS10PhotoCapture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreiOS10PhotoCapture.swift; sourceTree = "<group>"; };
+		0B22D319261196200049FF36 /* YPCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPCameraVC.swift; sourceTree = "<group>"; };
+		0B22D31B261196200049FF36 /* YPVideoProcessor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPVideoProcessor.swift; sourceTree = "<group>"; };
+		0B22D31C261196200049FF36 /* YPPermissionCheckable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPermissionCheckable.swift; sourceTree = "<group>"; };
+		0B22D31D261196200049FF36 /* YPDeviceOrientationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDeviceOrientationHelper.swift; sourceTree = "<group>"; };
+		0B22D31F261196200049FF36 /* AVCaptureDevice+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureDevice+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D320261196200049FF36 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D321261196200049FF36 /* String+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D322261196200049FF36 /* AVMutableComposition+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVMutableComposition+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D323261196200049FF36 /* AVAsset+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVAsset+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D324261196200049FF36 /* AVPlayer+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVPlayer+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D325261196200049FF36 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D326261196200049FF36 /* UIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D327261196200049FF36 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D328261196200049FF36 /* PHCachingImageManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHCachingImageManager+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D329261196200049FF36 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D32A261196200049FF36 /* CIImage+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CIImage+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D32B261196200049FF36 /* NSFileManager+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSFileManager+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D32C261196200049FF36 /* URL+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D32D261196200049FF36 /* AVFoundation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFoundation+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D32E261196200049FF36 /* PHFetchResult+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PHFetchResult+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D32F261196200049FF36 /* CGRect+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGRect+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D330261196200049FF36 /* AVFileType+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVFileType+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D331261196200049FF36 /* AVCaptureSession+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AVCaptureSession+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D332261196200049FF36 /* CGFloat+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D333261196200049FF36 /* UICollectionView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D334261196200049FF36 /* IndexSet+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IndexSet+Extensions.swift"; sourceTree = "<group>"; };
+		0B22D335261196200049FF36 /* YPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPHelper.swift; sourceTree = "<group>"; };
+		0B22D336261196200049FF36 /* YPLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLoadingView.swift; sourceTree = "<group>"; };
+		0B22D337261196200049FF36 /* YPPhotoSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPPhotoSaver.swift; sourceTree = "<group>"; };
+		0B22D338261196200049FF36 /* YPAlerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPAlerts.swift; sourceTree = "<group>"; };
+		0B22D339261196200049FF36 /* YPLoaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPLoaders.swift; sourceTree = "<group>"; };
+		0B22D33A261196200049FF36 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0B300C9226056393000EED8A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0B300C97260566C9000EED8A /* ProfilePostGridCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePostGridCell.swift; sourceTree = "<group>"; };
 		0B3631CA2607117A00948409 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
@@ -113,9 +310,226 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B22D2BE261196200049FF36 /* YPImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2BF261196200049FF36 /* LICENSE */,
+				0B22D2C0261196200049FF36 /* Resources */,
+				0B22D2D7261196200049FF36 /* Source */,
+				0B22D33A261196200049FF36 /* README.md */,
+			);
+			path = YPImagePicker;
+			sourceTree = "<group>";
+		};
+		0B22D2C0261196200049FF36 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2C1261196200049FF36 /* YPImagePickerLocalizable.strings */,
+				0B22D2CA261196200049FF36 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0B22D2D7261196200049FF36 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2D8261196200049FF36 /* Filters */,
+				0B22D2E4261196200049FF36 /* YPPickerVC.swift */,
+				0B22D2E5261196200049FF36 /* Configuration */,
+				0B22D2ED261196200049FF36 /* YPImagePicker.swift */,
+				0B22D2EE261196200049FF36 /* Models */,
+				0B22D2F4261196200049FF36 /* SelectionsGallery */,
+				0B22D2F8261196200049FF36 /* Pages */,
+				0B22D31A261196200049FF36 /* Helpers */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		0B22D2D8261196200049FF36 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2D9261196200049FF36 /* Video */,
+				0B22D2DD261196200049FF36 /* Crop */,
+				0B22D2E0261196200049FF36 /* YPPhotoFiltersVC.swift */,
+				0B22D2E1261196200049FF36 /* YPFiltersView.swift */,
+				0B22D2E2261196200049FF36 /* YPFilterCollectionViewCell.swift */,
+				0B22D2E3261196200049FF36 /* YPFilter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
+		0B22D2D9261196200049FF36 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2DA261196200049FF36 /* YPVideoView.swift */,
+				0B22D2DB261196200049FF36 /* YPVideoFiltersVC.swift */,
+				0B22D2DC261196200049FF36 /* YPVideoFiltersVC.xib */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		0B22D2DD261196200049FF36 /* Crop */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2DE261196200049FF36 /* YPCropView.swift */,
+				0B22D2DF261196200049FF36 /* YPCropVC.swift */,
+			);
+			path = Crop;
+			sourceTree = "<group>";
+		};
+		0B22D2E5261196200049FF36 /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2E6261196200049FF36 /* YPFonts.swift */,
+				0B22D2E7261196200049FF36 /* YPImageSize.swift */,
+				0B22D2E8261196200049FF36 /* YPImagePickerConfiguration.swift */,
+				0B22D2E9261196200049FF36 /* YPWordings.swift */,
+				0B22D2EA261196200049FF36 /* YPColors.swift */,
+				0B22D2EB261196200049FF36 /* YPPickerScreen.swift */,
+				0B22D2EC261196200049FF36 /* YPIcons.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		0B22D2EE261196200049FF36 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2EF261196200049FF36 /* YPLibrarySelection.swift */,
+				0B22D2F0261196200049FF36 /* YPMediaItem.swift */,
+				0B22D2F1261196200049FF36 /* YPDragDirection.swift */,
+				0B22D2F2261196200049FF36 /* YPPermissionDeniedPopup.swift */,
+				0B22D2F3261196200049FF36 /* YPTrimError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0B22D2F4261196200049FF36 /* SelectionsGallery */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2F5261196200049FF36 /* YPSelectionsGalleryVC.swift */,
+				0B22D2F6261196200049FF36 /* YPSelectionsGalleryView.swift */,
+				0B22D2F7261196200049FF36 /* YPSelectionsGalleryCell.swift */,
+			);
+			path = SelectionsGallery;
+			sourceTree = "<group>";
+		};
+		0B22D2F8261196200049FF36 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2F9261196200049FF36 /* Video */,
+				0B22D2FC261196200049FF36 /* Gallery */,
+				0B22D313261196200049FF36 /* Photo */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		0B22D2F9261196200049FF36 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2FA261196200049FF36 /* YPVideoCaptureHelper.swift */,
+				0B22D2FB261196200049FF36 /* YPVideoCaptureVC.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		0B22D2FC261196200049FF36 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D2FD261196200049FF36 /* YPLibraryVC+CollectionView.swift */,
+				0B22D2FE261196200049FF36 /* YPAlbumsManager.swift */,
+				0B22D2FF261196200049FF36 /* YPLibraryVC+PanGesture.swift */,
+				0B22D300261196200049FF36 /* YPLibraryViewDelegate.swift */,
+				0B22D301261196200049FF36 /* YPGridView.swift */,
+				0B22D302261196200049FF36 /* YPAssetZoomableView.swift */,
+				0B22D303261196200049FF36 /* YPAlbumView.swift */,
+				0B22D304261196200049FF36 /* YPAlbumVC.swift */,
+				0B22D305261196200049FF36 /* YPAlbumCell.swift */,
+				0B22D306261196200049FF36 /* YPLibrary+LibraryChange.swift */,
+				0B22D307261196200049FF36 /* BottomPager */,
+				0B22D30C261196200049FF36 /* YPLibraryVC.swift */,
+				0B22D30D261196200049FF36 /* LibraryMediaManager.swift */,
+				0B22D30E261196200049FF36 /* YPAssetViewContainer.swift */,
+				0B22D30F261196200049FF36 /* YPLibraryView.swift */,
+				0B22D310261196200049FF36 /* YPAlbum.swift */,
+				0B22D311261196200049FF36 /* YPLibraryViewCell.swift */,
+				0B22D312261196200049FF36 /* YPLibraryView.xib */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
+		0B22D307261196200049FF36 /* BottomPager */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D308261196200049FF36 /* YPMenuItem.swift */,
+				0B22D309261196200049FF36 /* YPBottomPager.swift */,
+				0B22D30A261196200049FF36 /* YPPagerMenu.swift */,
+				0B22D30B261196200049FF36 /* YPBottomPagerView.swift */,
+			);
+			path = BottomPager;
+			sourceTree = "<group>";
+		};
+		0B22D313261196200049FF36 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D314261196200049FF36 /* YPPhotoCaptureDefaults.swift */,
+				0B22D315261196200049FF36 /* YPPhotoCapture.swift */,
+				0B22D316261196200049FF36 /* YPCameraView.swift */,
+				0B22D317261196200049FF36 /* PostiOS10PhotoCapture.swift */,
+				0B22D318261196200049FF36 /* PreiOS10PhotoCapture.swift */,
+				0B22D319261196200049FF36 /* YPCameraVC.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		0B22D31A261196200049FF36 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D31B261196200049FF36 /* YPVideoProcessor.swift */,
+				0B22D31C261196200049FF36 /* YPPermissionCheckable.swift */,
+				0B22D31D261196200049FF36 /* YPDeviceOrientationHelper.swift */,
+				0B22D31E261196200049FF36 /* Extensions */,
+				0B22D335261196200049FF36 /* YPHelper.swift */,
+				0B22D336261196200049FF36 /* YPLoadingView.swift */,
+				0B22D337261196200049FF36 /* YPPhotoSaver.swift */,
+				0B22D338261196200049FF36 /* YPAlerts.swift */,
+				0B22D339261196200049FF36 /* YPLoaders.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		0B22D31E261196200049FF36 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0B22D31F261196200049FF36 /* AVCaptureDevice+Extensions.swift */,
+				0B22D320261196200049FF36 /* UIButton+Extensions.swift */,
+				0B22D321261196200049FF36 /* String+Extensions.swift */,
+				0B22D322261196200049FF36 /* AVMutableComposition+Extensions.swift */,
+				0B22D323261196200049FF36 /* AVAsset+Extensions.swift */,
+				0B22D324261196200049FF36 /* AVPlayer+Extensions.swift */,
+				0B22D325261196200049FF36 /* UIColor+Extensions.swift */,
+				0B22D326261196200049FF36 /* UIImage+Extensions.swift */,
+				0B22D327261196200049FF36 /* UINavigationBar+Extensions.swift */,
+				0B22D328261196200049FF36 /* PHCachingImageManager+Extensions.swift */,
+				0B22D329261196200049FF36 /* UIBarButtonItem+Extensions.swift */,
+				0B22D32A261196200049FF36 /* CIImage+Extensions.swift */,
+				0B22D32B261196200049FF36 /* NSFileManager+Extensions.swift */,
+				0B22D32C261196200049FF36 /* URL+Extensions.swift */,
+				0B22D32D261196200049FF36 /* AVFoundation+Extensions.swift */,
+				0B22D32E261196200049FF36 /* PHFetchResult+Extensions.swift */,
+				0B22D32F261196200049FF36 /* CGRect+Extensions.swift */,
+				0B22D330261196200049FF36 /* AVFileType+Extensions.swift */,
+				0B22D331261196200049FF36 /* AVCaptureSession+Extensions.swift */,
+				0B22D332261196200049FF36 /* CGFloat+Extensions.swift */,
+				0B22D333261196200049FF36 /* UICollectionView+Extensions.swift */,
+				0B22D334261196200049FF36 /* IndexSet+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		0B3FF9D026033BD200048060 = {
 			isa = PBXGroup;
 			children = (
+				0B22D2BE261196200049FF36 /* YPImagePicker */,
 				0B3FF9DB26033BD200048060 /* Parstagram */,
 				0B3FF9F226033BD400048060 /* ParstagramTests */,
 				0B3FF9FD26033BD400048060 /* ParstagramUITests */,
@@ -291,6 +705,25 @@
 			knownRegions = (
 				en,
 				Base,
+				de,
+				ar,
+				"zh-Hans",
+				ja,
+				es,
+				it,
+				bg,
+				ko,
+				"zh-Hant",
+				tr,
+				pl,
+				"pt-BR",
+				vi,
+				ru,
+				fr,
+				id,
+				nl,
+				th,
+				"pt-PT",
 			);
 			mainGroup = 0B3FF9D026033BD200048060;
 			productRefGroup = 0B3FF9DA26033BD200048060 /* Products */;
@@ -311,7 +744,13 @@
 			files = (
 				0B3FF9E926033BD300048060 /* LaunchScreen.storyboard in Resources */,
 				0B3FF9E626033BD300048060 /* Assets.xcassets in Resources */,
+				0B22D33C261196200049FF36 /* YPImagePickerLocalizable.strings in Resources */,
+				0B22D36E261196200049FF36 /* YPLibraryView.xib in Resources */,
+				0B22D33B261196200049FF36 /* LICENSE in Resources */,
+				0B22D33D261196200049FF36 /* Assets.xcassets in Resources */,
+				0B22D393261196200049FF36 /* README.md in Resources */,
 				0B3FF9E426033BD200048060 /* Main.storyboard in Resources */,
+				0B22D340261196200049FF36 /* YPVideoFiltersVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -439,20 +878,103 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B22D382261196200049FF36 /* UIBarButtonItem+Extensions.swift in Sources */,
+				0B22D385261196200049FF36 /* URL+Extensions.swift in Sources */,
+				0B22D34C261196200049FF36 /* YPColors.swift in Sources */,
+				0B22D360261196200049FF36 /* YPAlbumView.swift in Sources */,
+				0B22D373261196200049FF36 /* PreiOS10PhotoCapture.swift in Sources */,
+				0B22D35D261196200049FF36 /* YPLibraryViewDelegate.swift in Sources */,
 				0B3631E32607D2CA00948409 /* CommentCell.swift in Sources */,
+				0B22D364261196200049FF36 /* YPMenuItem.swift in Sources */,
+				0B22D392261196200049FF36 /* YPLoaders.swift in Sources */,
 				0B3FFA3B260422CF00048060 /* PostCell.swift in Sources */,
+				0B22D34A261196200049FF36 /* YPImagePickerConfiguration.swift in Sources */,
 				0B3FFA1C2603410200048060 /* LoginViewController.swift in Sources */,
+				0B22D344261196200049FF36 /* YPFiltersView.swift in Sources */,
+				0B22D365261196200049FF36 /* YPBottomPager.swift in Sources */,
+				0B22D37A261196200049FF36 /* String+Extensions.swift in Sources */,
+				0B22D352261196200049FF36 /* YPDragDirection.swift in Sources */,
+				0B22D372261196200049FF36 /* PostiOS10PhotoCapture.swift in Sources */,
+				0B22D354261196200049FF36 /* YPTrimError.swift in Sources */,
+				0B22D36A261196200049FF36 /* YPAssetViewContainer.swift in Sources */,
+				0B22D377261196200049FF36 /* YPDeviceOrientationHelper.swift in Sources */,
+				0B22D38D261196200049FF36 /* IndexSet+Extensions.swift in Sources */,
+				0B22D33F261196200049FF36 /* YPVideoFiltersVC.swift in Sources */,
+				0B22D36C261196200049FF36 /* YPAlbum.swift in Sources */,
 				0B3FF9DD26033BD200048060 /* AppDelegate.swift in Sources */,
+				0B22D36D261196200049FF36 /* YPLibraryViewCell.swift in Sources */,
+				0B22D380261196200049FF36 /* UINavigationBar+Extensions.swift in Sources */,
+				0B22D346261196200049FF36 /* YPFilter.swift in Sources */,
+				0B22D342261196200049FF36 /* YPCropVC.swift in Sources */,
+				0B22D359261196200049FF36 /* YPVideoCaptureVC.swift in Sources */,
+				0B22D367261196200049FF36 /* YPBottomPagerView.swift in Sources */,
+				0B22D388261196200049FF36 /* CGRect+Extensions.swift in Sources */,
+				0B22D349261196200049FF36 /* YPImageSize.swift in Sources */,
+				0B22D35A261196200049FF36 /* YPLibraryVC+CollectionView.swift in Sources */,
+				0B22D34E261196200049FF36 /* YPIcons.swift in Sources */,
+				0B22D369261196200049FF36 /* LibraryMediaManager.swift in Sources */,
 				0B3FFA212603411900048060 /* FeedViewController.swift in Sources */,
 				0BBBBB1C2605E8BD003B6BD7 /* ExploreFeedCell.swift in Sources */,
+				0B22D362261196200049FF36 /* YPAlbumCell.swift in Sources */,
+				0B22D34F261196200049FF36 /* YPImagePicker.swift in Sources */,
+				0B22D383261196200049FF36 /* CIImage+Extensions.swift in Sources */,
+				0B22D343261196200049FF36 /* YPPhotoFiltersVC.swift in Sources */,
+				0B22D374261196200049FF36 /* YPCameraVC.swift in Sources */,
+				0B22D348261196200049FF36 /* YPFonts.swift in Sources */,
+				0B22D390261196200049FF36 /* YPPhotoSaver.swift in Sources */,
+				0B22D35F261196200049FF36 /* YPAssetZoomableView.swift in Sources */,
+				0B22D34D261196200049FF36 /* YPPickerScreen.swift in Sources */,
+				0B22D35B261196200049FF36 /* YPAlbumsManager.swift in Sources */,
+				0B22D353261196200049FF36 /* YPPermissionDeniedPopup.swift in Sources */,
+				0B22D386261196200049FF36 /* AVFoundation+Extensions.swift in Sources */,
+				0B22D38B261196200049FF36 /* CGFloat+Extensions.swift in Sources */,
+				0B22D38F261196200049FF36 /* YPLoadingView.swift in Sources */,
+				0B22D347261196200049FF36 /* YPPickerVC.swift in Sources */,
 				0B3631FF260EED0E00948409 /* EditProfileViewController.swift in Sources */,
+				0B22D38C261196200049FF36 /* UICollectionView+Extensions.swift in Sources */,
+				0B22D37B261196200049FF36 /* AVMutableComposition+Extensions.swift in Sources */,
+				0B22D378261196200049FF36 /* AVCaptureDevice+Extensions.swift in Sources */,
+				0B22D35E261196200049FF36 /* YPGridView.swift in Sources */,
+				0B22D33E261196200049FF36 /* YPVideoView.swift in Sources */,
+				0B22D35C261196200049FF36 /* YPLibraryVC+PanGesture.swift in Sources */,
+				0B22D36F261196200049FF36 /* YPPhotoCaptureDefaults.swift in Sources */,
 				0B3FF9DF26033BD200048060 /* SceneDelegate.swift in Sources */,
+				0B22D361261196200049FF36 /* YPAlbumVC.swift in Sources */,
+				0B22D391261196200049FF36 /* YPAlerts.swift in Sources */,
+				0B22D376261196200049FF36 /* YPPermissionCheckable.swift in Sources */,
+				0B22D37D261196200049FF36 /* AVPlayer+Extensions.swift in Sources */,
+				0B22D389261196200049FF36 /* AVFileType+Extensions.swift in Sources */,
+				0B22D379261196200049FF36 /* UIButton+Extensions.swift in Sources */,
+				0B22D345261196200049FF36 /* YPFilterCollectionViewCell.swift in Sources */,
+				0B22D370261196200049FF36 /* YPPhotoCapture.swift in Sources */,
+				0B22D350261196200049FF36 /* YPLibrarySelection.swift in Sources */,
+				0B22D375261196200049FF36 /* YPVideoProcessor.swift in Sources */,
+				0B22D356261196200049FF36 /* YPSelectionsGalleryView.swift in Sources */,
+				0B22D38E261196200049FF36 /* YPHelper.swift in Sources */,
+				0B22D384261196200049FF36 /* NSFileManager+Extensions.swift in Sources */,
 				0B300C98260566C9000EED8A /* ProfilePostGridCell.swift in Sources */,
+				0B22D34B261196200049FF36 /* YPWordings.swift in Sources */,
+				0B22D368261196200049FF36 /* YPLibraryVC.swift in Sources */,
 				0B3FFA26260353FE00048060 /* SignUpViewController.swift in Sources */,
+				0B22D381261196200049FF36 /* PHCachingImageManager+Extensions.swift in Sources */,
+				0B22D366261196200049FF36 /* YPPagerMenu.swift in Sources */,
+				0B22D37C261196200049FF36 /* AVAsset+Extensions.swift in Sources */,
 				0B3631CB2607117A00948409 /* CommentsViewController.swift in Sources */,
+				0B22D355261196200049FF36 /* YPSelectionsGalleryVC.swift in Sources */,
+				0B22D358261196200049FF36 /* YPVideoCaptureHelper.swift in Sources */,
+				0B22D351261196200049FF36 /* YPMediaItem.swift in Sources */,
 				0BBBBB242605E8F0003B6BD7 /* ExploreFeedViewController.swift in Sources */,
+				0B22D357261196200049FF36 /* YPSelectionsGalleryCell.swift in Sources */,
+				0B22D387261196200049FF36 /* PHFetchResult+Extensions.swift in Sources */,
+				0B22D371261196200049FF36 /* YPCameraView.swift in Sources */,
+				0B22D341261196200049FF36 /* YPCropView.swift in Sources */,
+				0B22D36B261196200049FF36 /* YPLibraryView.swift in Sources */,
 				0B300C9326056393000EED8A /* ProfileViewController.swift in Sources */,
+				0B22D37E261196200049FF36 /* UIColor+Extensions.swift in Sources */,
+				0B22D38A261196200049FF36 /* AVCaptureSession+Extensions.swift in Sources */,
+				0B22D37F261196200049FF36 /* UIImage+Extensions.swift in Sources */,
 				0B3FFA2B2604077700048060 /* CameraViewController.swift in Sources */,
+				0B22D363261196200049FF36 /* YPLibrary+LibraryChange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +1010,33 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0B22D2C1261196200049FF36 /* YPImagePickerLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B22D2C2261196200049FF36 /* de */,
+				0B22D2C3261196200049FF36 /* ar */,
+				0B22D2C4261196200049FF36 /* zh-Hans */,
+				0B22D2C5261196200049FF36 /* ja */,
+				0B22D2C6261196200049FF36 /* en */,
+				0B22D2C7261196200049FF36 /* es */,
+				0B22D2C8261196200049FF36 /* it */,
+				0B22D2C9261196200049FF36 /* bg */,
+				0B22D2CB261196200049FF36 /* ko */,
+				0B22D2CC261196200049FF36 /* zh-Hant */,
+				0B22D2CD261196200049FF36 /* tr */,
+				0B22D2CE261196200049FF36 /* pl */,
+				0B22D2CF261196200049FF36 /* pt-BR */,
+				0B22D2D0261196200049FF36 /* vi */,
+				0B22D2D1261196200049FF36 /* ru */,
+				0B22D2D2261196200049FF36 /* fr */,
+				0B22D2D3261196200049FF36 /* id */,
+				0B22D2D4261196200049FF36 /* nl */,
+				0B22D2D5261196200049FF36 /* th */,
+				0B22D2D6261196200049FF36 /* pt-PT */,
+			);
+			name = YPImagePickerLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		0B3FF9E226033BD200048060 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

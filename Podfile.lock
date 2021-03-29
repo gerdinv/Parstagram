@@ -10,11 +10,19 @@ PODS:
     - Parse/Core (= 1.19.2)
   - Parse/Core (1.19.2):
     - Bolts/Tasks (= 1.9.1)
+  - PryntTrimmerView (4.0.0)
+  - SteviaLayout (4.7.3)
+  - YPImagePicker (4.3.1):
+    - PryntTrimmerView (~> 4.0.0)
+    - SteviaLayout (~> 4.7.3)
 
 DEPENDENCIES:
   - AlamofireImage
   - MessageInputBar
   - Parse
+  - PryntTrimmerView (= 4.0.0)
+  - SteviaLayout
+  - YPImagePicker
 
 SPEC REPOS:
   trunk:
@@ -23,6 +31,9 @@ SPEC REPOS:
     - Bolts
     - MessageInputBar
     - Parse
+    - PryntTrimmerView
+    - SteviaLayout
+    - YPImagePicker
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
@@ -30,7 +41,10 @@ SPEC CHECKSUMS:
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   MessageInputBar: e81c7535347f1f7b923de7080409a535a004b6e4
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
+  PryntTrimmerView: 67e67573ffd4c073f1308effa66aefd0cfa667a0
+  SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
+  YPImagePicker: 08bbb809ed62bf4149fc015c97249eb4b9463ff9
 
-PODFILE CHECKSUM: b1e45fab262fba67c58708e0b22b67c3cb37062e
+PODFILE CHECKSUM: b5e44baa58c5fad57937f7f5c030903f38be2d71
 
 COCOAPODS: 1.10.1

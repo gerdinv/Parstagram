@@ -10,17 +10,83 @@ import Parse
 import AlamofireImage
 
 
-class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+
+class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
 
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var commentTextField: UITextField!
+    @IBOutlet weak var commentTextView: UITextView!
+    
+    var config = YPImagePickerConfiguration()
+    
+    var appearsss = true;
+    var im: UIImage!
+    var didEdit = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
+        commentTextView.delegate = self
+         
+        config.onlySquareImagesFromCamera = true
+        config.usesFrontCamera = false
+        config.showsPhotoFilters = true
+        config.showsVideoTrimmer = true
+        config.shouldSaveNewPicturesToAlbum = true
+        config.albumName = "DefaultYPImagePickerAlbumName"
+        config.startOnScreen = YPPickerScreen.photo
+        config.screens = [.library, .photo, .video]
+        config.showsCrop = .none
+        config.targetImageSize = YPImageSize.original
+        config.overlayView = UIView()
+        config.hidesStatusBar = true
+        config.hidesBottomBar = false
+        config.hidesCancelButton = false
+        config.preferredStatusBarStyle = UIStatusBarStyle.default
+//        config.bottomMenuItemSelectedTextColour = UIColor(r: 38, g: 38, b: 38)
+//        config.bottomMenuItemUnSelectedTextColour = UIColor(r: 153, g: 153, b: 153)
+        config.maxCameraZoomFactor = 1.0
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if !didEdit {
+            commentTextView.text = ""
+            didEdit = true
+        }
+        
+        imageView.image = im
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if appearsss {
+            let picker = YPImagePicker(configuration: config)
+            
+            picker.didFinishPicking { [unowned picker] items, _ in
+                if let photo = items.singlePhoto {
+    //                print(photo.fromCamera) // Image source (camera or library)
+    //                print(photo.image) // Final image selected by the user
+    //                print(photo.originalImage) // original image selected by the user, unfiltered
+                    print(photo.modifiedImage) // Transformed image, can be nil
+    //                print(photo.exifMeta) // Print exif meta data of original image.
+                    self.im = photo.image
+                }
+                
+                picker.dismiss(animated: true, completion: nil)
+                print("picker dimiss")
+            }
+            present(picker, animated: true, completion: nil)
+            print("present picker")
+            appearsss = false
+        } else {
+            imageView.image = self.im
+        }
+        
+        
     }
 
 
+    
+    
     @IBAction func onSubmit(_ sender: Any) {
         let post = PFObject(className: "Posts")
         let user = PFUser.current()!
@@ -29,7 +95,7 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         let num = user["numberOfPosts"] as! Int
         
         post["author"] = user
-        post["caption"] = commentTextField.text
+        post["caption"] = commentTextView.text
         post["image"] = imageFile
         user["numberOfPosts"] = num + 1
         
