@@ -109,5 +109,40 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         commentBar.inputTextView.text = nil
         becomeFirstResponder()
     }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let delete = deletePost(at: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [delete])
+    }
+    
+    func deletePost(at indexPath: IndexPath) -> UIContextualAction{
+        let currentUser = PFUser.current()
+//      Get comment and user
+        let comments = self.selectedPost["comments"] as! [PFObject]
+        let comment = comments[indexPath.row]
+        let commentAuthor = comment["author"] as! PFUser
+        let objectId = comment.objectId!
+
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            if currentUser?.objectId == commentAuthor.objectId {
+                let query = PFQuery(className:"Comments")
+                    query.whereKey("objectId", equalTo:objectId)
+                    query.limit = 1
+                
+                query.findObjectsInBackground { (commentsToDelete: [PFObject]?, error) in
+                    if commentsToDelete != nil {
+                        for singleComment in commentsToDelete! {
+                            singleComment.deleteInBackground()
+                            print("deleted")
+                         }
+                    }
+                }
+            }
+            completion(true)
+            self.tableView.reloadData()
+        }
+        return action
+    }
 }
 
