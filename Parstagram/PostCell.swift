@@ -14,6 +14,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var captionLabel: UILabel!
     @IBOutlet weak var profilePhotoView: UIImageView!
     @IBOutlet weak var usernameLabelTop: UILabel!
+    @IBOutlet weak var timeAgoLabel: UILabel!
     
     var delegateBtn: myBtnDelegate?
     var selectedPost: PFObject!

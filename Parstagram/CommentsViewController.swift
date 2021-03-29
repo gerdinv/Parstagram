@@ -22,6 +22,28 @@ extension UIViewController {
     }
 }
 
+extension Date {
+    func timeAgoDisplayComments() -> String {
+        let secondsAgo = Int(Date().timeIntervalSince(self))
+        let minute = 60
+        let hour = minute * 60
+        let day = hour * 24
+        let week = day * 7
+        
+        
+        if secondsAgo < minute {
+            return "\(secondsAgo) s"
+        } else if secondsAgo < hour {
+            return "\(secondsAgo / minute) mins"
+        } else if secondsAgo < day {
+            return "\(secondsAgo / hour) hrs"
+        }
+        
+        return "\(secondsAgo / day) w"
+        
+    }
+}
+
 class CommentsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate {
     
     @IBOutlet weak var tableView: UITableView!
@@ -83,6 +105,11 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
 //      Makes profile picture round
         cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size.width / 2
         cell.profileImage.clipsToBounds = true
+        
+//      Time ago posted
+        let post = selectedPost as! PFObject
+        let date = post.createdAt!
+        cell.timeAgoLabelComments.text = date.timeAgoDisplayComments()
         
         return cell
     }

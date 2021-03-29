@@ -5,11 +5,37 @@
 //  Created by Gerdin Ventura on 3/18/21.
 //
 
-
-
 import UIKit
 import Parse
 import AlamofireImage
+
+extension Date {
+    func timeAgoDisplay() -> String {
+        let secondsAgo = Int(Date().timeIntervalSince(self))
+        let minute = 60
+        let hour = minute * 60
+        let day = hour * 24
+        let week = day * 7
+        
+        
+        if secondsAgo < minute {
+            return "\(secondsAgo) seconds ago"
+        } else if secondsAgo < hour {
+            return "\(secondsAgo / minute) minutes ago"
+        } else if secondsAgo < day {
+            return "\(secondsAgo / hour) hours ago"
+        } else if secondsAgo < week {
+            return "\(secondsAgo / day) weeks ago"
+        } else if secondsAgo < (week * 2) {
+            print("")
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+    
+        return formatter.string(from: self)
+    }
+}
 
 class FeedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, myBtnDelegate {
     @IBOutlet weak var tableView: UITableView!
@@ -104,6 +130,10 @@ class FeedViewController: UIViewController, UITableViewDelegate, UITableViewData
 //      Makes profile picture round
         cell.profilePhotoView.layer.cornerRadius = cell.profilePhotoView.frame.size.width / 2
         cell.profilePhotoView.clipsToBounds = true
+        
+//      Time ago posted
+        let date = post.createdAt!
+        cell.timeAgoLabel.text = date.timeAgoDisplay()
         
         return cell
     }
