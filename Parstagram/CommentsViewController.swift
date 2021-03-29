@@ -80,6 +80,10 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.commentLabel.text = comment["text"] as? String
         cell.profileImage.af.setImage(withURL: profileImageUrl!)
         
+//      Makes profile picture round
+        cell.profileImage.layer.cornerRadius = cell.profileImage.frame.size.width / 2
+        cell.profileImage.clipsToBounds = true
+        
         return cell
     }
     

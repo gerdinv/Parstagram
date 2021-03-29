@@ -61,7 +61,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oto-Q4-Fqs" userLabel="signUpButton">
                                 <rect key="frame" x="87" y="453" width="116" height="34"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="116" id="82T-hT-MbU"/>
                                     <constraint firstAttribute="height" constant="34" id="GQQ-nb-OXS"/>
@@ -75,7 +75,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGA-Zb-sAW" userLabel="loginButton">
                                 <rect key="frame" x="211" y="453" width="116" height="34"/>
-                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="48O-UA-Tzt"/>
                                     <constraint firstAttribute="width" constant="116" id="o1o-3m-ZnF"/>
@@ -394,7 +394,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fI5-p7-nKu" userLabel="likeButton">
                                                     <rect key="frame" x="20" y="279" width="27" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="systemGray2Color"/>
                                                     <state key="normal" image="heart" catalog="system">
                                                         <color key="titleColor" red="0.54410103089999995" green="0.46390706380000002" blue="0.82901729059999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <color key="titleShadowColor" red="0.68221746429999996" green="0.49038654700000001" blue="0.92038784900000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -404,7 +404,7 @@
                                                     <rect key="frame" x="55" y="279" width="30" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="systemGray2Color"/>
                                                     <state key="normal" image="message" catalog="system"/>
                                                     <connections>
                                                         <action selector="onComment:" destination="JdS-8Y-Z1r" eventType="touchUpInside" id="BYz-WB-U3e"/>
@@ -460,14 +460,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-Cg-pF5">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="Z87-Cg-pF5">
                                 <rect key="frame" x="0.0" y="61" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tgs-05-HUJ">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="tgs-05-HUJ">
                                 <rect key="frame" x="0.0" y="108" width="414" height="788"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lxe-Xd-UNJ">
                                     <size key="itemSize" width="195" height="220"/>
@@ -499,6 +498,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ope-d3-CVQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="tgs-05-HUJ" secondAttribute="bottom" id="BhL-QC-wDq"/>
+                            <constraint firstItem="tgs-05-HUJ" firstAttribute="trailing" secondItem="Ope-d3-CVQ" secondAttribute="trailing" id="E8Y-l8-JAf"/>
+                            <constraint firstItem="tgs-05-HUJ" firstAttribute="top" secondItem="Ccj-HO-4Fp" secondAttribute="top" constant="108" id="G0Z-jW-Qli"/>
+                            <constraint firstItem="tgs-05-HUJ" firstAttribute="leading" secondItem="Ope-d3-CVQ" secondAttribute="leading" id="XMQ-S5-q1y"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="TGe-6P-TCJ"/>
                     <connections>
@@ -577,6 +582,15 @@
                     <view key="view" contentMode="scaleToFill" id="35e-Vl-sLx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Activity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-Lp-mdQ">
+                                <rect key="frame" x="20" y="80" width="160" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gjt-Od-Vv3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -665,9 +679,8 @@
                                     <segue destination="c2H-hb-Ka7" kind="show" id="YE5-8R-wt0"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="968-o4-aug">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="968-o4-aug">
                                 <rect key="frame" x="0.0" y="303" width="414" height="593"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bj3-gc-2oM">
                                     <size key="itemSize" width="201" height="249"/>
@@ -720,6 +733,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PHZ-Dz-Mi2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="968-o4-aug" secondAttribute="bottom" id="2x1-OR-0pA"/>
+                            <constraint firstItem="968-o4-aug" firstAttribute="top" secondItem="zNF-d7-Jpf" secondAttribute="top" constant="303" id="DYk-S1-Ywl"/>
+                            <constraint firstItem="968-o4-aug" firstAttribute="leading" secondItem="PHZ-Dz-Mi2" secondAttribute="leading" id="Rl1-Xs-ePM"/>
+                            <constraint firstItem="968-o4-aug" firstAttribute="trailing" secondItem="PHZ-Dz-Mi2" secondAttribute="trailing" id="cow-qu-Cli"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="K3m-Rx-pgN">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="Unj-ku-8Wy">
@@ -850,7 +869,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="QLD-xW-Rtl"/>
+        <segue reference="wye-hR-tBN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
@@ -870,6 +889,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray3Color">
             <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
