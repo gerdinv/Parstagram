@@ -27,19 +27,18 @@ class LoginViewController: UIViewController {
           if user != nil {
             self.performSegue(withIdentifier: "loginSegue", sender: nil)
           } else {
-            print("Error: \(error?.localizedDescription)")
+//          Wrong crendentials alert
+            let alert = UIAlertController(title: "Wrong Credentials", message: "Invalid username or password", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "dismiss", style: .default, handler: nil))
+            self.present(alert, animated: true)
           }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    @IBAction func onResetPassword(_ sender: Any) {
+//        let email = usernameTextField.text as! String
+//        PFUser.requestPasswordResetForEmail(inBackground: email)
+//        print("password reset")
     }
-    */
-
 }

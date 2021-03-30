@@ -28,8 +28,6 @@ extension Date {
         let minute = 60
         let hour = minute * 60
         let day = hour * 24
-        let week = day * 7
-        
         
         if secondsAgo < minute {
             return "\(secondsAgo) s"
@@ -107,7 +105,7 @@ class CommentsViewController: UIViewController, UITableViewDelegate, UITableView
         cell.profileImage.clipsToBounds = true
         
 //      Time ago posted
-        let post = selectedPost as! PFObject
+        let post = selectedPost!
         let date = post.createdAt!
         cell.timeAgoLabelComments.text = date.timeAgoDisplayComments()
         
